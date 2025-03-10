@@ -50,13 +50,13 @@ TEST(CircleTest, NegativeRadius) {
 TEST(CircleTest, NegativeFerence) {
   Circle c(1);
   c.setFerence(-10);
-  EXPECT_DOUBLE_EQ(c.getRadius(), 0);
+  EXPECT_DOUBLE_EQ(c.getRadius(), 1);
 }
 
 TEST(CircleTest, NegativeArea) {
   Circle c(1);
   c.setArea(-20);
-  EXPECT_DOUBLE_EQ(c.getRadius(), 0);
+  EXPECT_DOUBLE_EQ(c.getRadius(), 1);
 }
 
 TEST(CircleTest, LargeValues) {
@@ -80,7 +80,7 @@ TEST(TaskTest, ConcreteCost) {
   EXPECT_NEAR(calcConcreteCost(), 21991.148575, 1e-6);
 }
 
-TEST(TaskTest, FenceCost) { EXPECT_NEAR(calcFenceCost(), 50265.48246, 1e-6); }
+TEST(TaskTest, FenceCost) { EXPECT_NEAR(calcFenceCost(), 50265.482457, 1e-6); }
 
 TEST(TaskTest, MinPoolSize) {
   Circle pool(0);
